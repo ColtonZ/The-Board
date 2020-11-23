@@ -3,7 +3,6 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
-import 'package:file_picker/file_picker.dart';
 
 class WorkroomPage extends StatelessWidget {
   @override
