@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_board/pages/streamPage.dart';
 import 'package:the_board/pages/workroomPage.dart';
+import 'package:the_board/pages/accountPage.dart';
 
 class AppTabBar extends StatelessWidget {
   @override
@@ -38,7 +39,7 @@ class AppTabBar extends StatelessWidget {
           children: [
             WorkroomPage(),
             StreamPage(),
-            Icon(Icons.directions_bike), // Swap with widget of account page
+            AccountPage(), // Swap with widget of account page
           ],
         ),
       ),
