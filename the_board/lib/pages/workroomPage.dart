@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:the_board/backend/themes.dart';
 
 class WorkroomPage extends StatelessWidget {
   @override
@@ -105,7 +106,7 @@ class WorkRoomList extends StatelessWidget {
                         // Show room name
                         child: Text(
                           room[1],
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: header3Style,
                           textAlign: TextAlign.left,
                           maxLines: 1,
                         ),
@@ -116,8 +117,7 @@ class WorkRoomList extends StatelessWidget {
                         child: Text(
                           room[3],
                           maxLines: 2,
-                          style:
-                              TextStyle(color: Colors.grey[700]), // Last chat
+                          style: lastMessageStyle, // Last chat
                         ),
                       ),
                     ],
@@ -448,10 +448,7 @@ class ChatPageState extends State<ChatPage> {
                             color: Colors.transparent,
                             child: Text(
                               chat[0],
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: textColor,
-                              ),
+                              style: header3Style,
                               maxLines: 1,
                             ),
                           ),

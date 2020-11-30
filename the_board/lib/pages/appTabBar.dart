@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_board/backend/themes.dart';
 import 'package:the_board/pages/streamPage.dart';
 import 'package:the_board/pages/workroomPage.dart';
 import 'package:the_board/pages/accountPage.dart';
@@ -16,17 +17,17 @@ class AppTabBar extends StatelessWidget {
         indicatorWeight: 2.0,
         tabs: [
           Tab(
-            child: Text('Work Rooms'),
+            child: Text('Work Rooms', style: subtitleStyle,),
           ),
           Tab(
-            child: Text('Streams'),
+            child: Text('Streams', style: subtitleStyle,),
           ),
           Tab(
-            child: Text('Acount'),
+            child: Text('Acount', style: subtitleStyle,),
           ),
         ],
       ),
-      title: Text('The Board'),
+      title: Text('The Board', style: titleStyle,),
     );
     return DefaultTabController(
       length: 3, // Number of tabs
