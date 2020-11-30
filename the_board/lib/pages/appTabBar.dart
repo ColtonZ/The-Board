@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_board/backend/themes.dart';
 import 'package:the_board/pages/streamPage.dart';
+import 'package:the_board/pages/streamPostCreationPage.dart';
 import 'package:the_board/pages/workroomPage.dart';
 import 'package:the_board/pages/accountPage.dart';
 
@@ -23,6 +24,9 @@ class AppTabBar extends StatelessWidget {
             child: Text('Streams', style: subtitleStyle,),
           ),
           Tab(
+            child: Text('Create a stream post', style: subtitleStyle,),
+          ),
+          Tab(
             child: Text('Acount', style: subtitleStyle,),
           ),
         ],
@@ -30,7 +34,7 @@ class AppTabBar extends StatelessWidget {
       title: Text('The Board', style: titleStyle,),
     );
     return DefaultTabController(
-      length: 3, // Number of tabs
+      length: 4, // Number of tabs
       child: Scaffold(
         appBar: MediaQuery.of(context).orientation == Orientation.landscape ||
                 MediaQuery.of(context).viewInsets.bottom != 0.0
@@ -40,6 +44,7 @@ class AppTabBar extends StatelessWidget {
           children: [
             WorkroomPage(),
             StreamPage(),
+            StreamPostCreationPage(),
             AccountPage(), // Swap with widget of account page
           ],
         ),
